@@ -35,6 +35,8 @@ class ViewController extends Controller
             return $this->render('html', array('html' => $page->content, 'title' => $page->title));
         } elseif ($page->type == Page::TYPE_IFRAME) {
             return $this->render('iframe', array('url' => $page->content, 'navigationClass' => $page->navigation_class));
+         } elseif ($page->type == Page::TYPE_TINYMCE) {
+            return $this->render('tinymce', array('html' => $page->content, 'title' => $page->title));
         } elseif ($page->type == Page::TYPE_LINK) {
             return $this->redirect($page->content);
         } elseif ($page->type == Page::TYPE_MARKDOWN) {

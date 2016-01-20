@@ -26,6 +26,7 @@ class ContainerPage extends \humhub\modules\content\components\ContentActiveReco
     const TYPE_HTML = '2';
     const TYPE_IFRAME = '3';
     const TYPE_MARKDOWN = '4';
+    const TYPE_TINYMCE = '5';
 
     /**
      * @inheritdoc
@@ -93,6 +94,7 @@ class ContainerPage extends \humhub\modules\content\components\ContentActiveReco
             self::TYPE_MARKDOWN => Yii::t('CustomPagesModule.base', 'MarkDown'),
             self::TYPE_LINK => Yii::t('CustomPagesModule.base', 'Link'),
             self::TYPE_IFRAME => Yii::t('CustomPagesModule.base', 'IFrame'),
+            self::TYPE_TINYMCE => Yii::t('CustomPagesModule.base', 'TinyMCE'),
         );
     }
 

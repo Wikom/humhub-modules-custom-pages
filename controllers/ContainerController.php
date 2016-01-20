@@ -32,6 +32,8 @@ class ContainerController extends ContentContainerController
             return $this->redirect($page->page_content);
         } elseif ($page->type == ContainerPage::TYPE_MARKDOWN) {
             return $this->render('view_markdown', array('md' => $page->page_content));
+        } elseif ($page->type == ContainerPage::TYPE_TINYMCE) {
+            return $this->render('view_tinymce', array('html' => $page->page_content));
         } else {
             throw new HttpException('500', 'Invalid page type!');
         }

@@ -38,6 +38,34 @@ Assets::register($this);
                 <?php echo $form->labelEx($page, 'url'); ?>
                 <?php echo $form->textField($page, 'url', array('class' => 'form-control', 'placeholder' => Yii::t('CustomPagesModule.views_admin_edit', 'URL'))); ?>
             </div>
+        <?php elseif ($page->type == ContainerPage::TYPE_TINYMCE): ?>
+            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+            <script>
+
+                tinymce.init({
+                    selector:'textarea',
+                    height: 500,
+                    theme: 'modern',
+                    plugins: [
+                        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                        'searchreplace wordcount visualblocks visualchars code fullscreen',
+                        'insertdatetime media nonbreaking save table contextmenu directionality',
+                        'emoticons template paste textcolor colorpicker textpattern imagetools'
+                    ],
+                    toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+                    toolbar2: 'print preview media | forecolor backcolor emoticons',
+                    image_advtab: false,
+                    content_css: [
+                        '//themes/TP21NISCI/css/theme.css',
+                        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
+                    ]
+                });
+
+            </script>
+            <div class="form-group" id="content_field">
+                <?php echo $form->labelEx($page, 'page_content'); ?>
+                <?php echo $form->textArea($page, 'page_content', array('class' => 'form-control', 'rows' => '15', 'placeholder' => Yii::t('CustomPagesModule.views_admin_edit', 'Content'))); ?>
+            </div>
         <?php endif; ?>
         <div class="form-group">
             <?php echo $form->labelEx($page, 'sort_order'); ?>
