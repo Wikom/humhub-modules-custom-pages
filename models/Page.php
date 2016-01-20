@@ -31,6 +31,7 @@ class Page extends ActiveRecord
     const TYPE_HTML = '2';
     const TYPE_IFRAME = '3';
     const TYPE_MARKDOWN = '4';
+    const TYPE_TINYMCE = '5';
 
     /**
      * @return string the associated database table name
@@ -104,6 +105,7 @@ class Page extends ActiveRecord
             self::TYPE_HTML => Yii::t('CustomPagesModule.base', 'HTML'),
             self::TYPE_MARKDOWN => Yii::t('CustomPagesModule.base', 'MarkDown'),
             self::TYPE_IFRAME => Yii::t('CustomPagesModule.base', 'IFrame'),
+            self::TYPE_TINYMCE => Yii::t('CustomPagesModule.base', 'TinyMCE'),
         );
     }
 

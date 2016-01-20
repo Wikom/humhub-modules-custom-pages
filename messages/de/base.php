@@ -4,6 +4,7 @@ return array (
   'Custom Pages' => 'Eigene Seite',
   'HTML' => 'HTML',
   'IFrame' => 'iFrame',
+  'TinyMCE' => 'Tiny MCE wysiwyg Editor',
   'Link' => 'Link',
   'MarkDown' => 'MarkDown',
   'Navigation' => 'Navigation',

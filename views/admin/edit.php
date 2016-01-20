@@ -44,6 +44,13 @@ Assets::register($this);
                 <?php echo $form->labelEx($page, 'url'); ?>
                 <?php echo $form->textField($page, 'url', array('class' => 'form-control', 'placeholder' => Yii::t('CustomPagesModule.views_admin_edit', 'URL'))); ?>
             </div>
+        <?php elseif ($page->type == Page::TYPE_TINYMCE): ?>
+            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+            <script>tinymce.init({ selector:'textarea' });</script>
+            <div class="form-group" id="content_field">
+                <?php echo $form->labelEx($page, 'content'); ?>
+                <?php echo $form->textArea($page, 'content', array('class' => 'form-control', 'rows' => '15', 'placeholder' => Yii::t('CustomPagesModule.views_admin_edit', 'Content'))); ?>
+            </div>
         <?php endif; ?>
 
         <div class="form-group">

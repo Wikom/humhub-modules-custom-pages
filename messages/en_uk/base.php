@@ -21,6 +21,7 @@ return array (
   'Custom Pages' => '',
   'HTML' => '',
   'IFrame' => '',
+  'TinyMCE' => 'Tiny MCE wysiwyg Editor',
   'Link' => '',
   'MarkDown' => '',
   'Navigation' => '',
