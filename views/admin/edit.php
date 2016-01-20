@@ -61,10 +61,11 @@ Assets::register($this);
                     toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
                     toolbar2: 'print preview media | forecolor backcolor emoticons',
                     image_advtab: false,
+                    body_class: 'tinycontainer',
                     content_css: [
-                        '//themes/TP21NISCI/css/theme.css',
-                        //'//www.tinymce.com/css/codepen.min.css'
-                        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
+                        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+                        '/themes/TP21NISCI/css/theme.css',
+                        '/themes/TP21NISCI/font/open_sans/open-sans.css',
                     ]
                 });
 
